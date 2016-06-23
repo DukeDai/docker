@@ -1,0 +1,56 @@
+INSTALLER_UI=silent
+
+# The user directory to Federated Search Services. The default path is C:\\Documentum\\.
+# On UNIX and Linux, the default path is set by the DOCUMENTUM environment variable.
+COMMON.DCTM_USER_DIR=<user directory>
+
+# Specify the Federated Search Services components to install.
+ECI_SERVER.INSTALL_FS2=true
+ECI_SERVER.INSTALL_SDK=false
+
+# Specify the network configuration.
+ECI_SERVER.DEFAULT_NETWORK_CONFIGURATION=true
+
+# Specify the virtual host to access the Federated Search Services server.
+ECI_SERVER.VIRTUAL_HOST_CONFIG=true
+ECI_SERVER.ECI_HOSTNAME=localhost
+
+# Specify the port range. You must use five successive ports and the base port number must be greater than 1024.
+ECI_SERVER.DEFAULT_ECI_SERVER_BASE_PORT=3000
+ECI_SERVER.ADMIN_HTTP_PORT=3002
+ECI_SERVER.ADMIN_SECURE_HTTP_PORT=3003
+ECI_SERVER.ADMIN_SERVER_SHUTDOWN=3004
+ECI_SERVER.RMI_REGISTRY_PORT=3005
+
+
+# SSL settings
+ECI_SERVER.ADMIN_SSL_PROTOCOL=TLS
+ECI_SERVER.ADMIN_ALGO=SunX509
+# Use the following SSL settings if you use AIX.
+# ECI_SERVER.ADMIN_SSL_PROTOCOL=SSL
+# ECI_SERVER.ADMIN_ALGO=IbmX509
+
+# Specify the HTTP proxy settings.
+ECI_SERVER.PROXY_CONFIG=false
+ECI_SERVER.AUTHENTICATION_CONFIG=false
+ECI_SERVER.PROXY_PORT=8000
+ECI_SERVER.PROXY_HOST=<proxy host name>
+ECI_SERVER.PROXY_LOGIN=<proxy login>
+ECI_SERVER.PROXY_PASSWORD=<proxy password>
+
+# Specify the notification settings.
+# Specify whether to send an email to the administrator when the server starts.
+ECI_SERVER.SEND_MAIL_CONFIG=false
+ECI_SERVER.MAIL_SERVER_HOST=mailhost
+ECI_SERVER.ECI_ADMIN_EMAIL=<administrator email address>
+
+
+# Specify the administrator configuration.
+ECI_SERVER.ADMIN_ID=admin
+ECI_SERVER.ADMIN_PASSWORD=ecis
+# Specify whether to automatically upgrade adapters.
+ECI_SERVER.UPDATER_ISENABLED=false
+# Specify whether to start the services after installation. This setting applies to Windows only.
+ECI_SERVER.SERVICES_ISSTARTED=false
+# Specify whether to use the default administrator configuration.
+ECI_SERVER.DEFAULT_ADMIN_CONFIGURATION=true
